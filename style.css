@@ -94,5 +94,44 @@ ul {
     list-style-type: square;
     /* el padding es para quitar las viñetas */
     /* padding-left: 0px; */
+}
+table { 
+    /* Para hacer tablas| */
+    /* Ancho utilizado */
+    width: 100%;
+    /* Colapsar bordes| */
+    border-collapse: collapse;
+    /* Estilo de borde */
+    border-style: solid; border-color: black; border-width: 3px; 
+}
+tr {
+    /* Alinear texto de fila*/
+    text-align: center;
     
+}
+th {
+    /* Borde para encabezado con color de fondo */
+    border: solid; border-color: rgb(0, 0, 0); border-width: 2px; 
+    background-color: darkgray;
+
+}
+td { 
+    /* Borde para datos  */
+    border: solid; border-color: rgb(0, 0, 0); border-width: 2px; 
+}
+
+th:hover {
+    /* cursor sobre encabezado azul y trabajando... */
+    color: blue;
+    cursor:progress;
+}
+td:hover { 
+    /* Cursor sobre datos con fondo y manita en cursor */
+    color: rgb(255, 255, 255);
+    background-color: rgb(0, 0, 0); 
+    cursor: pointer;
+}
+tr:nth-child(odd) {
+    /* Poner color a las tablas por números impares para even y para números pares es con odd */
+    background-color: rgb(220, 220, 220);
 }
