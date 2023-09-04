@@ -51,6 +51,8 @@ div h2, div h3 { /* Permite aplicar estilos a los hijos <h2> de los <div> y así
     background-position: center top;
 }
 .margen{
+    /* Poner transición de sombra en la caja al pasar el cursor con tiempo de respuesta de .4 segundos */
+    transition: box-shadow .4s ease;
     background-color: chocolate;
     /* Espacio fuera del margen, el orden es arriba, derecha, abajo, izquierda */
     margin: 10px 10px 10px 40px;
@@ -58,7 +60,14 @@ div h2, div h3 { /* Permite aplicar estilos a los hijos <h2> de los <div> y así
     padding: 10px 10px 40px 10px;
     /* Estilo del borde con color, ancho y radio */
     border-style: outset; border-color: slateblue; border-radius: 5px; border-width: 5px;
+    /* Colocar cursor de manita */
+    cursor: pointer;
 }
+.margen:hover{
+    /* Colocar una sombra a la caja del margen cuando se pase el cursor, derecha, abajo, difuminado y color con trasparencia */
+    box-shadow: 0rem 0rem .5rem rgba(0, 0, 0, 1);
+}
+
 .align{
     /* Tamaño de fuente */
     font-size: 24px;
@@ -134,4 +143,71 @@ td:hover {
 tr:nth-child(odd) {
     /* Poner color a las tablas por números impares para even y para números pares es con odd */
     background-color: rgb(220, 220, 220);
+}
+
+.inline {
+    display: inline;
+} 
+#position {
+    /* Default en html */
+    /* position: static; */
+    /* posición relativa a la esquina superior izquierda */
+    /* position: relative;
+    left: 30px;
+    top: 30px; */
+    /* posición fija aunque se mueva el scroll */
+    /* position: fixed; */
+    /* posción absoluta con respecto al elemento padre más cercano que tenga o al body */
+    /* position: absolute; */
+    /* posición sticky es para dejarlo fijo hasta que se mueve el scroll siempre y cuando se utilizen top o bottom... */
+    position: sticky;
+    top: 10px;
+}
+span {
+    /* Ponerlos separados  */
+    /* display: block; */
+    /* no morstrarlos ni espacio*/
+    /* display: none; */
+    /* no mostrarlos pero si espacio */
+    /* visibility: hidden; */
+    /* ancho fijo hasta 150px con fondo rojo, si se hace zoom se respetan los 500px */
+    /* width: 500px; */
+    /* background-color: rgb(186, 186, 186); */
+    /* ancho variable o máximo, si se hace zoom se adapta a 500 o menos px */
+    /* max-width: 4rem; */
+    display: inline;
+    padding: 2rem;
+    position: relative;
+}
+.copyright {
+    /* float: left; */
+    position: relative;
+    bottom: 6.5rem;
+    left: 2rem;
+    text-align: left;
+    transition: color .3s ease;
+    font-weight: bold; color: rgb(0, 0, 0); font-size: medium;
+    margin: 0;
+
+}
+.copyright:hover {
+    color: rgb(83, 124, 198);
+    cursor: help;
+}
+.fd:hover {
+    color: rgb(151, 62, 62);
+    cursor: help;
+}
+.ml:hover {
+    color: rgb(151, 62, 62);
+    cursor: help;
+}
+footer section {
+    text-align: right;
+    background-color: darkgray;
+    background-size: cover;
+    padding: 2rem;
+    font-weight: bold; color: rgb(0, 0, 0); font-size: medium;
+    margin: 0;
+    transition: color .3s ease;
 }
